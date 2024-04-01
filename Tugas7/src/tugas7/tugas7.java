@@ -11,40 +11,31 @@ class LinearEquation {
     private double a, b, c, d, e, f;
 
     public LinearEquation() {
-        // Default constructor
+        //tanpa argumen
     }
 
-    public LinearEquation(double a, double b, double c, double d, double e, double f) {
+     public void setA(double a) {
         this.a = a;
+    }
+
+    public void setB(double b) {
         this.b = b;
+    }
+
+    public void setC(double c) {
         this.c = c;
+    }
+
+    public void setD(double d) {
         this.d = d;
+    }
+
+    public void setE(double e) {
         this.e = e;
+    }
+
+    public void setF(double f) {
         this.f = f;
-    }
-
-    public double getA() {
-        return a;
-    }
-
-    public double getB() {
-        return b;
-    }
-
-    public double getC() {
-        return c;
-    }
-
-    public double getD() {
-        return d;
-    }
-
-    public double getE() {
-        return e;
-    }
-
-    public double getF() {
-        return f;
     }
 
     public boolean isSolvable() {
@@ -77,7 +68,14 @@ public class tugas7 {
         double e = scanner.nextDouble();
         double f = scanner.nextDouble();
 
-        LinearEquation equation = new LinearEquation(a, b, c, d, e, f);
+        LinearEquation equation = new LinearEquation();
+        // Set nilai a, b, c, d, e, dan f 
+        equation.setA(a);
+        equation.setB(b);
+        equation.setC(c);
+        equation.setD(d);
+        equation.setE(e);
+        equation.setF(f);
 
         if (equation.isSolvable()) {
             System.out.println("Solusi untuk x adalah: " + equation.getX());
